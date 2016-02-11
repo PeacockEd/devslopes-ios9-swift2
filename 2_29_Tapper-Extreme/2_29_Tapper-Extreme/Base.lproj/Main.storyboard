@@ -54,6 +54,9 @@
                                     <constraint firstAttribute="height" constant="177" id="6yb-GA-YXj"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="coin"/>
+                                <connections>
+                                    <action selector="onCoinTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1bt-Uh-ZgH"/>
+                                </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUJ-Se-zRu" userLabel="TapsLabel">
                                 <rect key="frame" x="175" y="264" width="251" height="72"/>
