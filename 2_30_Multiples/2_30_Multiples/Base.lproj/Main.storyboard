@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="__30_Multiples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chalkboard" translatesAutoresizingMaskIntoConstraints="NO" id="57h-XM-1z8">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MULTIPLES" translatesAutoresizingMaskIntoConstraints="NO" id="538-vI-CR1">
+                                <rect key="frame" x="139" y="28" width="323" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="538-vI-CR1" secondAttribute="height" multiplier="323:92" id="7Gv-D9-0zW"/>
+                                    <constraint firstAttribute="height" constant="92" id="GV0-AE-VNy"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWv-i2-Y9u">
+                                <rect key="frame" x="197" y="410" width="206" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gWv-i2-Y9u" secondAttribute="height" multiplier="103:85" id="0B7-hG-nkw"/>
+                                    <constraint firstAttribute="width" constant="206" id="mTV-KX-Mqb"/>
+                                </constraints>
+                                <state key="normal" image="play"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="what multiple to add by?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xv9-jz-cwV">
+                                <rect key="frame" x="188" y="335" width="224" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="224" id="9gr-DD-CoT"/>
+                                    <constraint firstAttribute="height" constant="40" id="avC-Sr-7zo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="57h-XM-1z8" firstAttribute="top" secondItem="538-vI-CR1" secondAttribute="bottom" constant="-120" id="2Dr-fz-pJO"/>
+                            <constraint firstItem="538-vI-CR1" firstAttribute="centerX" secondItem="57h-XM-1z8" secondAttribute="centerX" id="GBc-4V-tp5"/>
+                            <constraint firstItem="gWv-i2-Y9u" firstAttribute="top" secondItem="Xv9-jz-cwV" secondAttribute="bottom" constant="35" id="IwT-K5-nJX"/>
+                            <constraint firstAttribute="trailing" secondItem="57h-XM-1z8" secondAttribute="trailing" id="N7u-9y-VST"/>
+                            <constraint firstItem="57h-XM-1z8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="OVV-r5-Ydz"/>
+                            <constraint firstItem="57h-XM-1z8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="T13-mk-Xol"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="57h-XM-1z8" secondAttribute="bottom" id="aqJ-6q-fJs"/>
+                            <constraint firstItem="gWv-i2-Y9u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d7Y-uc-mfj"/>
+                            <constraint firstItem="gWv-i2-Y9u" firstAttribute="top" secondItem="57h-XM-1z8" secondAttribute="bottom" constant="-190" id="kO6-m3-dfC"/>
+                            <constraint firstItem="gWv-i2-Y9u" firstAttribute="centerX" secondItem="Xv9-jz-cwV" secondAttribute="centerX" id="neb-wY-BPA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="362"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MULTIPLES" width="533" height="124"/>
+        <image name="chalkboard" width="801" height="750"/>
+        <image name="play" width="272" height="268"/>
+    </resources>
+</document>
