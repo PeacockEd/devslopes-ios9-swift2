@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var displayLabel:UILabel!
     
     private var btnSound: AVAudioPlayer!
-    private var runningNumber = ""
+    private var runningNumber = "0"
     private var leftValStr = ""
     private var rightValStr = ""
     private var result = ""
@@ -50,7 +50,12 @@ class ViewController: UIViewController {
     @IBAction func numberTapped(sender: UIButton!) {
         playSound()
         
-        runningNumber += "\(sender.tag)"
+        if runningNumber != "0" {
+            runningNumber += "\(sender.tag)"
+        } else {
+            runningNumber = "\(sender.tag)"
+        }
+        
         displayLabel.text = runningNumber
     }
     
@@ -68,6 +73,16 @@ class ViewController: UIViewController {
     }
     @IBAction func equalsTapped(sender: UIButton!) {
         performOperation(currentOperation)
+    }
+    
+    @IBAction func clearTapped(sender: UIButton!) {
+        playSound()
+        runningNumber = "0"
+        currentOperation = .Empty
+        leftValStr = ""
+        rightValStr = ""
+        result = ""
+        displayLabel.text = "0"
     }
     
     private func performOperation(op:Operation) {
