@@ -97,6 +97,9 @@
                             <constraint firstItem="agO-28-Og2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="73" id="ytL-G8-EdY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="monsterImg" destination="agO-28-Og2" id="WmE-3M-7uP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
