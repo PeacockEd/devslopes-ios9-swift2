@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     let NUMBER_OF_IMAGES = 4
     
     @IBOutlet weak var monsterImg:UIImageView!
+    @IBOutlet weak var foodImg:UIImageView!
+    @IBOutlet weak var heartImg:UIImageView!
     
 
     override func viewDidLoad() {
