@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5079BF3C1C7BA7360058CDC4 /* GameCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079BF3B1C7BA7360058CDC4 /* GameCharacter.swift */; };
+		5079BF3E1C7BAAE30058CDC4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079BF3D1C7BAAE30058CDC4 /* Player.swift */; };
+		5079BF401C7CD8400058CDC4 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079BF3F1C7CD8400058CDC4 /* GameController.swift */; };
+		5079BF431C7D3F440058CDC4 /* intro.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5079BF421C7D3F440058CDC4 /* intro.wav */; };
+		5079BF451C7D3F9D0058CDC4 /* attack.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5079BF441C7D3F9D0058CDC4 /* attack.wav */; };
+		5079BF471C7D40050058CDC4 /* background.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5079BF461C7D40050058CDC4 /* background.wav */; };
+		5079BF491C7D5CDD0058CDC4 /* dead.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5079BF481C7D5CDD0058CDC4 /* dead.mp3 */; };
+		5079BF4B1C7D5D840058CDC4 /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079BF4A1C7D5D840058CDC4 /* SoundController.swift */; };
 		50BE0C791C767D870062A30C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BE0C781C767D870062A30C /* AppDelegate.swift */; };
 		50BE0C7B1C767D870062A30C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BE0C7A1C767D870062A30C /* ViewController.swift */; };
 		50BE0C7E1C767D870062A30C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50BE0C7C1C767D870062A30C /* Main.storyboard */; };
@@ -16,6 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5079BF3B1C7BA7360058CDC4 /* GameCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCharacter.swift; sourceTree = "<group>"; };
+		5079BF3D1C7BAAE30058CDC4 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		5079BF3F1C7CD8400058CDC4 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		5079BF421C7D3F440058CDC4 /* intro.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = intro.wav; sourceTree = "<group>"; };
+		5079BF441C7D3F9D0058CDC4 /* attack.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = attack.wav; sourceTree = "<group>"; };
+		5079BF461C7D40050058CDC4 /* background.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = background.wav; sourceTree = "<group>"; };
+		5079BF481C7D5CDD0058CDC4 /* dead.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dead.mp3; sourceTree = "<group>"; };
+		5079BF4A1C7D5D840058CDC4 /* SoundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundController.swift; sourceTree = "<group>"; };
 		50BE0C751C767D870062A30C /* 4_29_OOP-Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "4_29_OOP-Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BE0C781C767D870062A30C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50BE0C7A1C767D870062A30C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +53,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5079BF411C7D3F230058CDC4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				50E3B07F1C76C45300B4C96A /* Minecraft.ttf */,
+				5079BF481C7D5CDD0058CDC4 /* dead.mp3 */,
+				5079BF461C7D40050058CDC4 /* background.wav */,
+				5079BF441C7D3F9D0058CDC4 /* attack.wav */,
+				5079BF421C7D3F440058CDC4 /* intro.wav */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		50BE0C6C1C767D870062A30C = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +84,17 @@
 		50BE0C771C767D870062A30C /* 4_29_OOP-Game */ = {
 			isa = PBXGroup;
 			children = (
-				50E3B07F1C76C45300B4C96A /* Minecraft.ttf */,
+				5079BF411C7D3F230058CDC4 /* Resources */,
 				50BE0C781C767D870062A30C /* AppDelegate.swift */,
 				50BE0C7A1C767D870062A30C /* ViewController.swift */,
+				5079BF3F1C7CD8400058CDC4 /* GameController.swift */,
 				50BE0C7C1C767D870062A30C /* Main.storyboard */,
 				50BE0C7F1C767D870062A30C /* Assets.xcassets */,
 				50BE0C811C767D870062A30C /* LaunchScreen.storyboard */,
 				50BE0C841C767D870062A30C /* Info.plist */,
+				5079BF3B1C7BA7360058CDC4 /* GameCharacter.swift */,
+				5079BF3D1C7BAAE30058CDC4 /* Player.swift */,
+				5079BF4A1C7D5D840058CDC4 /* SoundController.swift */,
 			);
 			path = "4_29_OOP-Game";
 			sourceTree = "<group>";
@@ -125,8 +157,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5079BF451C7D3F9D0058CDC4 /* attack.wav in Resources */,
+				5079BF431C7D3F440058CDC4 /* intro.wav in Resources */,
 				50BE0C831C767D870062A30C /* LaunchScreen.storyboard in Resources */,
 				50BE0C801C767D870062A30C /* Assets.xcassets in Resources */,
+				5079BF491C7D5CDD0058CDC4 /* dead.mp3 in Resources */,
+				5079BF471C7D40050058CDC4 /* background.wav in Resources */,
 				50E3B0801C76C45300B4C96A /* Minecraft.ttf in Resources */,
 				50BE0C7E1C767D870062A30C /* Main.storyboard in Resources */,
 			);
@@ -139,6 +175,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5079BF3E1C7BAAE30058CDC4 /* Player.swift in Sources */,
+				5079BF4B1C7D5D840058CDC4 /* SoundController.swift in Sources */,
+				5079BF401C7CD8400058CDC4 /* GameController.swift in Sources */,
+				5079BF3C1C7BA7360058CDC4 /* GameCharacter.swift in Sources */,
 				50BE0C7B1C767D870062A30C /* ViewController.swift in Sources */,
 				50BE0C791C767D870062A30C /* AppDelegate.swift in Sources */,
 			);
