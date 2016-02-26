@@ -35,7 +35,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Xbm-FQ-aMQ">
-                                <rect key="frame" x="208" y="33" width="184" height="52"/>
+                                <rect key="frame" x="205" y="35" width="184" height="52"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skull" translatesAutoresizingMaskIntoConstraints="NO" id="1tm-xX-usA">
                                         <rect key="frame" x="0.0" y="0.0" width="52" height="52"/>
@@ -105,10 +105,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lDD-Bh-siK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0zX-bS-11k"/>
-                            <constraint firstItem="Xbm-FQ-aMQ" firstAttribute="centerY" secondItem="lDD-Bh-siK" secondAttribute="centerY" id="9VW-U6-OlS"/>
+                            <constraint firstItem="Xbm-FQ-aMQ" firstAttribute="centerY" secondItem="lDD-Bh-siK" secondAttribute="centerY" constant="2" id="9VW-U6-OlS"/>
                             <constraint firstAttribute="trailing" secondItem="f0q-3y-3ae" secondAttribute="trailing" id="9ww-mO-QcM"/>
                             <constraint firstItem="9Yc-ox-AEq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CFm-3O-LCL"/>
-                            <constraint firstItem="Xbm-FQ-aMQ" firstAttribute="centerX" secondItem="lDD-Bh-siK" secondAttribute="centerX" id="Eum-ob-4gP"/>
+                            <constraint firstItem="lDD-Bh-siK" firstAttribute="centerX" secondItem="Xbm-FQ-aMQ" secondAttribute="centerX" constant="3" id="Eum-ob-4gP"/>
                             <constraint firstItem="PCF-NI-N1L" firstAttribute="top" secondItem="lDD-Bh-siK" secondAttribute="bottom" constant="3" id="FfK-uu-put"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="agO-28-Og2" secondAttribute="bottom" constant="44" id="HId-Bi-Ptf">
                                 <variation key="heightClass=compact-widthClass=compact" constant="47"/>

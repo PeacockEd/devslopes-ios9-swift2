@@ -25,10 +25,17 @@ class ViewController: UIViewController {
     private var penaltyImageArray = [UIImageView]()
     private var totalPenalties = 0
     private var timer:NSTimer!
+    private var monsterHappy = false
+    private var currentItem:UInt32 = 0
+    
+    private var sounds:SoundController!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        sounds = SoundController()
+        sounds.playSound(sound: SoundController.Sounds.Background, loop: true)
         
         monsterImg.playIdleAnimations()
         foodImg.dropTarget = monsterImg
@@ -59,24 +66,56 @@ class ViewController: UIViewController {
     
     func changeGameState()
     {
-        totalPenalties++
-        for x in 1...MAX_AMOUNT_OF_PENALTIES {
-            penaltyImageArray[x - 1].alpha = (x <= totalPenalties) ? OPAQUE : DIM_ALPHA
+        if !monsterHappy {
+            sounds.playSound(sound: SoundController.Sounds.Skull)
+            totalPenalties++
+            for x in 1...MAX_AMOUNT_OF_PENALTIES {
+                penaltyImageArray[x - 1].alpha = (x <= totalPenalties) ? OPAQUE : DIM_ALPHA
+            }
+            if totalPenalties >= MAX_AMOUNT_OF_PENALTIES {
+                gameOver()
+                return
+            }
         }
-        if totalPenalties >= MAX_AMOUNT_OF_PENALTIES {
-            gameOver()
+        let rand = arc4random_uniform(2) // 0 or 1
+        if rand == 0 {
+            foodImg.alpha = DIM_ALPHA
+            foodImg.userInteractionEnabled = false
+            heartImg.alpha = OPAQUE
+            heartImg.userInteractionEnabled = true
+        } else {
+            heartImg.alpha = DIM_ALPHA
+            heartImg.userInteractionEnabled = false
+            foodImg.alpha = OPAQUE
+            foodImg.userInteractionEnabled = true
         }
+        currentItem = rand
+        monsterHappy = false
     }
     
     func gameOver()
     {
         timer.invalidate()
         monsterImg.playDeathAnimations()
+        
+        sounds.playSound(sound: SoundController.Sounds.Death)
     }
     
     func itemDroppedOnCharacter(notification: AnyObject)
     {
-//        print("item dropped!!")
+        monsterHappy = true
+        startTimer()
+        
+        foodImg.alpha = DIM_ALPHA
+        foodImg.userInteractionEnabled = false
+        heartImg.alpha = DIM_ALPHA
+        heartImg.userInteractionEnabled = false
+        
+        if currentItem == 0 {
+            sounds.playSound(sound: SoundController.Sounds.Heart)
+        } else {
+            sounds.playSound(sound: SoundController.Sounds.Bite)
+        }
     }
 
     override func didReceiveMemoryWarning() {
