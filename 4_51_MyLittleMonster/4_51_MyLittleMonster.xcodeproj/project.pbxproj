@@ -13,6 +13,7 @@
 		504BFD491C7F8E1D00D6698E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 504BFD481C7F8E1D00D6698E /* Assets.xcassets */; };
 		504BFD4C1C7F8E1D00D6698E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 504BFD4A1C7F8E1D00D6698E /* LaunchScreen.storyboard */; };
 		504BFD541C7FBDBF00D6698E /* DraggableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504BFD531C7FBDBF00D6698E /* DraggableImageView.swift */; };
+		504BFD561C7FC0F600D6698E /* MonsterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504BFD551C7FC0F600D6698E /* MonsterImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		504BFD4B1C7F8E1D00D6698E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		504BFD4D1C7F8E1D00D6698E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		504BFD531C7FBDBF00D6698E /* DraggableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableImageView.swift; sourceTree = "<group>"; };
+		504BFD551C7FC0F600D6698E /* MonsterImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				504BFD481C7F8E1D00D6698E /* Assets.xcassets */,
 				504BFD4A1C7F8E1D00D6698E /* LaunchScreen.storyboard */,
 				504BFD4D1C7F8E1D00D6698E /* Info.plist */,
+				504BFD551C7FC0F600D6698E /* MonsterImageView.swift */,
 			);
 			path = 4_51_MyLittleMonster;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				504BFD441C7F8E1D00D6698E /* ViewController.swift in Sources */,
 				504BFD541C7FBDBF00D6698E /* DraggableImageView.swift in Sources */,
 				504BFD421C7F8E1D00D6698E /* AppDelegate.swift in Sources */,
+				504BFD561C7FC0F600D6698E /* MonsterImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
