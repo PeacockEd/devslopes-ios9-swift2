@@ -12,7 +12,7 @@ import AVFoundation
 class SoundController {
     
     enum Sounds {
-        case Background, Bite, Death, Heart, Skull
+        case Background, Bite, Death, Discipline, Heart, Skull
     }
     
     private var backgroundPlayer: AVAudioPlayer!
@@ -20,6 +20,7 @@ class SoundController {
     private var deathPlayer: AVAudioPlayer!
     private var heartPlayer: AVAudioPlayer!
     private var skullPlayer: AVAudioPlayer!
+    private var disciplinePlayer: AVAudioPlayer!
     
     private var playerDictionary = [Sounds : AVAudioPlayer?]()
     
@@ -31,8 +32,9 @@ class SoundController {
         deathPlayer = preparePlayer(fileName: "death", fileExt: "wav")
         heartPlayer = preparePlayer(fileName: "heart", fileExt: "wav")
         skullPlayer = preparePlayer(fileName: "skull", fileExt: "wav")
+        disciplinePlayer = preparePlayer(fileName: "discipline", fileExt: "mp3")
         
-        playerDictionary = [.Background:backgroundPlayer, .Bite:bitePlayer, .Death:deathPlayer, .Heart:heartPlayer, .Skull:skullPlayer]
+        playerDictionary = [.Background:backgroundPlayer, .Bite:bitePlayer, .Death:deathPlayer, .Discipline:disciplinePlayer, .Heart:heartPlayer, .Skull:skullPlayer]
     }
     
     private func preparePlayer(fileName name:String, fileExt:String) -> AVAudioPlayer?
@@ -76,6 +78,7 @@ class SoundController {
             if concretePlayer.playing {
                 let newPlayer = preparePlayer(concretePlayer.url!)
                 playerDictionary[sound] = nil
+                concretePlayer.stop()
                 newPlayer?.prepareToPlay()
                 newPlayer?.play()
                 playerDictionary[sound] = newPlayer

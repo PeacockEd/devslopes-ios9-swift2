@@ -7,49 +7,19 @@
 //
 
 import Foundation
-import UIKit
 
-class MonsterImageView:UIImageView {
+class MonsterImageView:BaseCharacter {
     
-    private let NUMBER_OF_IDLE_IMAGES = 4
-    private let NUMBER_OF_DEAD_IMAGES = 5
-    private let IDLE_IMAGE_STRING = "idle"
-    private let DEAD_IMAGE_STRING = "dead"
-    
-    
-    override init(frame: CGRect)
-    {
-        super.init(frame: frame)
+    override func awakeFromNib() {
+        idleImageCount = 4
+        dyingImageCount = 5
+        idleImgString = "idle_"
+        dyingImgString = "dead_"
+        animDuration = 0.8
     }
     
     required init?(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
-    }
-    
-    private func loadAnimationImages(imageType:String, imageCount:Int)
-    {
-        // set initial image
-        image = UIImage(named: "\(imageType)\(imageCount).png")
-        
-        var imageArray = [UIImage]()
-        for x in 1...imageCount {
-            let image = UIImage(named: "\(imageType)\(x).png")
-            imageArray.append(image!)
-        }
-        animationImages = imageArray
-        animationDuration = 0.8
-        animationRepeatCount = (imageType == DEAD_IMAGE_STRING) ? 1 : 0
-        startAnimating()
-    }
-    
-    func playIdleAnimations()
-    {
-        loadAnimationImages(IDLE_IMAGE_STRING, imageCount: NUMBER_OF_IDLE_IMAGES)
-    }
-    
-    func playDeathAnimations()
-    {
-        loadAnimationImages(DEAD_IMAGE_STRING, imageCount: NUMBER_OF_DEAD_IMAGES)
     }
 }

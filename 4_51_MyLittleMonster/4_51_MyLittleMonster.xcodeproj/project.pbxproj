@@ -20,6 +20,10 @@
 		504BFD611C810A2700D6698E /* skull.wav in Resources */ = {isa = PBXBuildFile; fileRef = 504BFD5D1C810A2700D6698E /* skull.wav */; };
 		504BFD631C810A4F00D6698E /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504BFD621C810A4F00D6698E /* SoundController.swift */; };
 		504BFD651C810BAF00D6698E /* heart.wav in Resources */ = {isa = PBXBuildFile; fileRef = 504BFD641C810BAF00D6698E /* heart.wav */; };
+		504BFD671C81FC3B00D6698E /* RobotImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504BFD661C81FC3B00D6698E /* RobotImageView.swift */; };
+		504BFD6B1C82052200D6698E /* BaseCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504BFD6A1C82052200D6698E /* BaseCharacter.swift */; };
+		504BFD6D1C824C4700D6698E /* discipline.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 504BFD6C1C824C4700D6698E /* discipline.mp3 */; };
+		504BFD6F1C84A85200D6698E /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504BFD6E1C84A85200D6698E /* GameController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		504BFD5D1C810A2700D6698E /* skull.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = skull.wav; sourceTree = "<group>"; };
 		504BFD621C810A4F00D6698E /* SoundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoundController.swift; path = ../SoundController.swift; sourceTree = "<group>"; };
 		504BFD641C810BAF00D6698E /* heart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = heart.wav; sourceTree = "<group>"; };
+		504BFD661C81FC3B00D6698E /* RobotImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotImageView.swift; sourceTree = "<group>"; };
+		504BFD6A1C82052200D6698E /* BaseCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCharacter.swift; sourceTree = "<group>"; };
+		504BFD6C1C824C4700D6698E /* discipline.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = discipline.mp3; sourceTree = "<group>"; };
+		504BFD6E1C84A85200D6698E /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameController.swift; path = ../GameController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +82,11 @@
 				504BFD411C7F8E1D00D6698E /* AppDelegate.swift */,
 				504BFD431C7F8E1D00D6698E /* ViewController.swift */,
 				504BFD531C7FBDBF00D6698E /* DraggableImageView.swift */,
-				504BFD551C7FC0F600D6698E /* MonsterImageView.swift */,
 				504BFD621C810A4F00D6698E /* SoundController.swift */,
+				504BFD6E1C84A85200D6698E /* GameController.swift */,
+				504BFD6A1C82052200D6698E /* BaseCharacter.swift */,
+				504BFD551C7FC0F600D6698E /* MonsterImageView.swift */,
+				504BFD661C81FC3B00D6698E /* RobotImageView.swift */,
 				504BFD451C7F8E1D00D6698E /* Main.storyboard */,
 				504BFD481C7F8E1D00D6698E /* Assets.xcassets */,
 				504BFD4A1C7F8E1D00D6698E /* LaunchScreen.storyboard */,
@@ -87,6 +98,7 @@
 		504BFD591C810A1500D6698E /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				504BFD6C1C824C4700D6698E /* discipline.mp3 */,
 				504BFD641C810BAF00D6698E /* heart.wav */,
 				504BFD5A1C810A2700D6698E /* bite.wav */,
 				504BFD5B1C810A2700D6698E /* cave-music.mp3 */,
@@ -159,6 +171,7 @@
 				504BFD601C810A2700D6698E /* death.wav in Resources */,
 				504BFD611C810A2700D6698E /* skull.wav in Resources */,
 				504BFD5F1C810A2700D6698E /* cave-music.mp3 in Resources */,
+				504BFD6D1C824C4700D6698E /* discipline.mp3 in Resources */,
 				504BFD4C1C7F8E1D00D6698E /* LaunchScreen.storyboard in Resources */,
 				504BFD491C7F8E1D00D6698E /* Assets.xcassets in Resources */,
 				504BFD471C7F8E1D00D6698E /* Main.storyboard in Resources */,
@@ -175,8 +188,11 @@
 				504BFD441C7F8E1D00D6698E /* ViewController.swift in Sources */,
 				504BFD631C810A4F00D6698E /* SoundController.swift in Sources */,
 				504BFD541C7FBDBF00D6698E /* DraggableImageView.swift in Sources */,
+				504BFD671C81FC3B00D6698E /* RobotImageView.swift in Sources */,
 				504BFD421C7F8E1D00D6698E /* AppDelegate.swift in Sources */,
+				504BFD6F1C84A85200D6698E /* GameController.swift in Sources */,
 				504BFD561C7FC0F600D6698E /* MonsterImageView.swift in Sources */,
+				504BFD6B1C82052200D6698E /* BaseCharacter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
