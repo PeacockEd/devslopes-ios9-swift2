@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_9_5_SizeClassesExercise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,109 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="R8g-oj-mbB">
+                                <rect key="frame" x="0.0" y="0.0" width="712" height="400"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BJD-df-6KR">
+                                        <rect key="frame" x="20" y="20" width="560" height="90"/>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.23529411764705882" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y1v-5U-nUa">
+                                        <rect key="frame" x="20" y="118" width="560" height="90"/>
+                                        <color key="backgroundColor" red="0.32156862745098042" green="0.6470588235294118" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tDn-Wi-GWA">
+                                        <rect key="frame" x="20" y="216" width="672" height="164"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8xv-JJ-6xv">
+                                                <rect key="frame" x="20" y="20" width="168" height="164"/>
+                                                <color key="backgroundColor" red="0.28627450980392155" green="0.13725490196078433" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SV3-bE-cNh">
+                                                <rect key="frame" x="196" y="20" width="384" height="164"/>
+                                                <color key="backgroundColor" red="0.99215686274509807" green="0.74509803921568629" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="8xv-JJ-6xv" firstAttribute="height" secondItem="tDn-Wi-GWA" secondAttribute="height" id="Vfq-ty-N46"/>
+                                            <constraint firstItem="8xv-JJ-6xv" firstAttribute="width" secondItem="tDn-Wi-GWA" secondAttribute="width" multiplier="0.25" id="ehx-HY-nBn"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Vfq-ty-N46"/>
+                                                <exclude reference="ehx-HY-nBn"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Vfq-ty-N46"/>
+                                                <include reference="ehx-HY-nBn"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tDn-Wi-GWA" firstAttribute="trailing" secondItem="Y1v-5U-nUa" secondAttribute="trailing" id="0m1-td-Lp5"/>
+                                    <constraint firstAttribute="trailing" secondItem="tDn-Wi-GWA" secondAttribute="trailing" id="GYU-VH-UJ2"/>
+                                    <constraint firstAttribute="trailing" secondItem="BJD-df-6KR" secondAttribute="trailing" id="RSD-r3-p28"/>
+                                    <constraint firstItem="Y1v-5U-nUa" firstAttribute="height" secondItem="R8g-oj-mbB" secondAttribute="height" multiplier="0.22" id="g57-gL-3W2"/>
+                                    <constraint firstItem="BJD-df-6KR" firstAttribute="top" secondItem="R8g-oj-mbB" secondAttribute="top" id="lNN-2E-XSr"/>
+                                    <constraint firstItem="BJD-df-6KR" firstAttribute="leading" secondItem="R8g-oj-mbB" secondAttribute="leading" id="qbm-cV-D75"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="RSD-r3-p28"/>
+                                        <exclude reference="lNN-2E-XSr"/>
+                                        <exclude reference="qbm-cV-D75"/>
+                                        <exclude reference="g57-gL-3W2"/>
+                                        <exclude reference="0m1-td-Lp5"/>
+                                        <exclude reference="GYU-VH-UJ2"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact" alignment="fill" axis="vertical">
+                                    <mask key="constraints">
+                                        <include reference="RSD-r3-p28"/>
+                                        <include reference="lNN-2E-XSr"/>
+                                        <include reference="qbm-cV-D75"/>
+                                        <include reference="g57-gL-3W2"/>
+                                        <include reference="0m1-td-Lp5"/>
+                                        <include reference="GYU-VH-UJ2"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R8g-oj-mbB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="NED-BS-uo9"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="R8g-oj-mbB" secondAttribute="bottom" constant="18" id="atX-H7-XyK"/>
+                            <constraint firstItem="BJD-df-6KR" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.22" id="e7N-UP-mQ1"/>
+                            <constraint firstItem="R8g-oj-mbB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jjn-rH-Ost"/>
+                            <constraint firstItem="R8g-oj-mbB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="pBZ-Tr-8YH"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="e7N-UP-mQ1"/>
+                                <exclude reference="NED-BS-uo9"/>
+                                <exclude reference="atX-H7-XyK"/>
+                                <exclude reference="jjn-rH-Ost"/>
+                                <exclude reference="pBZ-Tr-8YH"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="e7N-UP-mQ1"/>
+                                <include reference="NED-BS-uo9"/>
+                                <include reference="atX-H7-XyK"/>
+                                <include reference="jjn-rH-Ost"/>
+                                <include reference="pBZ-Tr-8YH"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="429"/>
         </scene>
     </scenes>
 </document>
