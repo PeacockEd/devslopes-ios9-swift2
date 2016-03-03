@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wqc-c4-anX">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--IPhone Landscape - ALL Portrait-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_9_5_SizeClassesExercise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="IPhone Landscape - ALL Portrait" customClass="ViewController" customModule="_9_5_SizeClassesExercise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -159,6 +160,144 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+        <!--iPad Landscape ONLY-->
+        <scene sceneID="ZkK-fw-Co7">
+            <objects>
+                <viewController id="Wqc-c4-anX" userLabel="iPad Landscape ONLY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fMM-pb-qNp"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gte-4f-vnn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nzv-vt-CS9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ucE-Zq-lBW">
+                                <rect key="frame" x="20" y="20" width="175" height="175"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.23529411759999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ucE-Zq-lBW" secondAttribute="height" multiplier="1:1" id="Qg1-4e-91q"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Qg1-4e-91q"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="30" width="560" height="176"/>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Qg1-4e-91q"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="30" width="760" height="176"/>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="em3-9Q-ui2">
+                                <rect key="frame" x="383" y="220" width="197" height="360"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.74509803919999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="320" y="218" width="260" height="384"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="420" y="218" width="360" height="384"/>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IZa-AZ-Nmk">
+                                <rect key="frame" x="203" y="20" width="377" height="175"/>
+                                <color key="backgroundColor" red="0.32156862749999998" green="0.64705882349999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="614" width="560" height="176"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="614" width="760" height="176"/>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tgf-g4-nah">
+                                <rect key="frame" x="84" y="337" width="125" height="125"/>
+                                <color key="backgroundColor" red="0.28627450980000002" green="0.13725490200000001" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Tgf-g4-nah" secondAttribute="height" multiplier="1:1" id="sz9-dB-jgd"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="sz9-dB-jgd"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="218" width="280" height="384"/>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="sz9-dB-jgd"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="218" width="380" height="384"/>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ucE-Zq-lBW" firstAttribute="leading" secondItem="nzv-vt-CS9" secondAttribute="leadingMargin" id="74U-cS-Swu"/>
+                            <constraint firstItem="IZa-AZ-Nmk" firstAttribute="height" secondItem="ucE-Zq-lBW" secondAttribute="height" id="GDF-vv-rGH"/>
+                            <constraint firstItem="Tgf-g4-nah" firstAttribute="centerX" secondItem="IZa-AZ-Nmk" secondAttribute="leading" id="GIG-Eo-fkE"/>
+                            <constraint firstItem="em3-9Q-ui2" firstAttribute="width" secondItem="IZa-AZ-Nmk" secondAttribute="width" multiplier="0.5" id="Grn-dB-V1A"/>
+                            <constraint firstItem="em3-9Q-ui2" firstAttribute="height" secondItem="Tgf-g4-nah" secondAttribute="height" multiplier="2.25" id="R36-ai-NvL"/>
+                            <constraint firstItem="IZa-AZ-Nmk" firstAttribute="leading" secondItem="ucE-Zq-lBW" secondAttribute="trailing" constant="7" id="SUV-DF-ios"/>
+                            <constraint firstItem="IZa-AZ-Nmk" firstAttribute="trailing" secondItem="nzv-vt-CS9" secondAttribute="trailingMargin" id="V4B-p7-PpU"/>
+                            <constraint firstItem="em3-9Q-ui2" firstAttribute="top" secondItem="IZa-AZ-Nmk" secondAttribute="bottom" constant="24" id="Vj2-qV-mAJ"/>
+                            <constraint firstItem="IZa-AZ-Nmk" firstAttribute="top" secondItem="fMM-pb-qNp" secondAttribute="bottom" id="W4o-V2-eW1"/>
+                            <constraint firstItem="em3-9Q-ui2" firstAttribute="centerY" secondItem="Tgf-g4-nah" secondAttribute="centerY" id="WzF-W5-ohe"/>
+                            <constraint firstItem="ucE-Zq-lBW" firstAttribute="width" secondItem="nzv-vt-CS9" secondAttribute="width" multiplier="0.22" id="a7V-iS-8SS"/>
+                            <constraint firstItem="ucE-Zq-lBW" firstAttribute="top" secondItem="fMM-pb-qNp" secondAttribute="bottom" id="i87-lC-jbN"/>
+                            <constraint firstItem="em3-9Q-ui2" firstAttribute="trailing" secondItem="nzv-vt-CS9" secondAttribute="trailingMargin" id="oRG-0x-1FG"/>
+                            <constraint firstItem="Gte-4f-vnn" firstAttribute="top" secondItem="em3-9Q-ui2" secondAttribute="bottom" constant="12" id="pJG-0a-fwT"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="74U-cS-Swu"/>
+                                <exclude reference="a7V-iS-8SS"/>
+                                <exclude reference="i87-lC-jbN"/>
+                                <exclude reference="GDF-vv-rGH"/>
+                                <exclude reference="SUV-DF-ios"/>
+                                <exclude reference="V4B-p7-PpU"/>
+                                <exclude reference="W4o-V2-eW1"/>
+                                <exclude reference="GIG-Eo-fkE"/>
+                                <exclude reference="Grn-dB-V1A"/>
+                                <exclude reference="R36-ai-NvL"/>
+                                <exclude reference="Vj2-qV-mAJ"/>
+                                <exclude reference="WzF-W5-ohe"/>
+                                <exclude reference="oRG-0x-1FG"/>
+                                <exclude reference="pJG-0a-fwT"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="74U-cS-Swu"/>
+                                <include reference="a7V-iS-8SS"/>
+                                <include reference="i87-lC-jbN"/>
+                                <include reference="GDF-vv-rGH"/>
+                                <include reference="SUV-DF-ios"/>
+                                <include reference="V4B-p7-PpU"/>
+                                <include reference="W4o-V2-eW1"/>
+                                <include reference="GIG-Eo-fkE"/>
+                                <include reference="Grn-dB-V1A"/>
+                                <include reference="R36-ai-NvL"/>
+                                <include reference="Vj2-qV-mAJ"/>
+                                <include reference="WzF-W5-ohe"/>
+                                <include reference="oRG-0x-1FG"/>
+                                <include reference="pJG-0a-fwT"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oQh-82-hMO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050.75" y="429"/>
         </scene>
     </scenes>
 </document>
