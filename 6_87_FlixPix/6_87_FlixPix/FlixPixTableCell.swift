@@ -14,6 +14,7 @@ class FlixPixTableCell: UITableViewCell {
     @IBOutlet weak var linkBtn:UIButton!
     @IBOutlet weak var titleBgView:UIView!
     @IBOutlet weak var titleLabel:UILabel!
+    @IBOutlet weak var descriptionLabel:UILabel!
     
 
     override func awakeFromNib()
@@ -22,6 +23,12 @@ class FlixPixTableCell: UITableViewCell {
         
         self.titleBgView.layer.cornerRadius = 6
         self.titleBgView.clipsToBounds = true
+    }
+    
+    // todo: change this from AnyObject to a MOVIE ENTITY ITEM!
+    func configureCell(item:AnyObject)
+    {
+        
     }
     
     @IBAction func onLinkBtnTapped(sender:AnyObject)

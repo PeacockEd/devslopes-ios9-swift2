@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		501279831C907F7F003B2172 /* FlixPixTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501279821C907F7F003B2172 /* FlixPixTableCell.swift */; };
+		501279851C909BDF003B2172 /* ModifyFlixPixVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501279841C909BDF003B2172 /* ModifyFlixPixVC.swift */; };
+		501279871C909FB1003B2172 /* ViewFlixPixItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501279861C909FB1003B2172 /* ViewFlixPixItemVC.swift */; };
+		501279891C90EE8C003B2172 /* ResponsiveTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501279881C90EE8C003B2172 /* ResponsiveTextFieldViewController.swift */; };
 		505AF82D1C8E27C7000024B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505AF82C1C8E27C7000024B4 /* AppDelegate.swift */; };
 		505AF82F1C8E27C7000024B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505AF82E1C8E27C7000024B4 /* ViewController.swift */; };
 		505AF8321C8E27C7000024B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505AF8301C8E27C7000024B4 /* Main.storyboard */; };
@@ -18,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		501279821C907F7F003B2172 /* FlixPixTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlixPixTableCell.swift; sourceTree = "<group>"; };
+		501279841C909BDF003B2172 /* ModifyFlixPixVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyFlixPixVC.swift; sourceTree = "<group>"; };
+		501279861C909FB1003B2172 /* ViewFlixPixItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFlixPixItemVC.swift; sourceTree = "<group>"; };
+		501279881C90EE8C003B2172 /* ResponsiveTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponsiveTextFieldViewController.swift; sourceTree = "<group>"; };
 		505AF8291C8E27C7000024B4 /* 6_87_FlixPix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 6_87_FlixPix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		505AF82C1C8E27C7000024B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		505AF82E1C8E27C7000024B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +64,7 @@
 		505AF82B1C8E27C7000024B4 /* 6_87_FlixPix */ = {
 			isa = PBXGroup;
 			children = (
+				501279881C90EE8C003B2172 /* ResponsiveTextFieldViewController.swift */,
 				505AF82C1C8E27C7000024B4 /* AppDelegate.swift */,
 				505AF82E1C8E27C7000024B4 /* ViewController.swift */,
 				505AF8301C8E27C7000024B4 /* Main.storyboard */,
@@ -66,6 +73,8 @@
 				505AF83B1C8E27C7000024B4 /* Info.plist */,
 				505AF8331C8E27C7000024B4 /* __87_FlixPix.xcdatamodeld */,
 				501279821C907F7F003B2172 /* FlixPixTableCell.swift */,
+				501279841C909BDF003B2172 /* ModifyFlixPixVC.swift */,
+				501279861C909FB1003B2172 /* ViewFlixPixItemVC.swift */,
 			);
 			path = 6_87_FlixPix;
 			sourceTree = "<group>";
@@ -144,7 +153,10 @@
 				505AF82F1C8E27C7000024B4 /* ViewController.swift in Sources */,
 				501279831C907F7F003B2172 /* FlixPixTableCell.swift in Sources */,
 				505AF8351C8E27C7000024B4 /* __87_FlixPix.xcdatamodeld in Sources */,
+				501279851C909BDF003B2172 /* ModifyFlixPixVC.swift in Sources */,
 				505AF82D1C8E27C7000024B4 /* AppDelegate.swift in Sources */,
+				501279871C909FB1003B2172 /* ViewFlixPixItemVC.swift in Sources */,
+				501279891C90EE8C003B2172 /* ResponsiveTextFieldViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
