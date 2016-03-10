@@ -118,7 +118,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="FlixPix" id="V4h-9O-Cnd">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="kV3-gW-OaW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kV3-gW-OaW">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="In8-kF-CUN" kind="show" id="SGs-na-sNw"/>
@@ -208,15 +208,33 @@
                                         <state key="normal" title="Add Photo">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onAddPhotoTapped:" destination="In8-kF-CUN" eventType="touchUpInside" id="fD7-Kr-FLB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyg-E7-FpQ">
+                                <rect key="frame" x="212" y="523" width="175" height="35"/>
+                                <color key="backgroundColor" red="0.078431372550000003" green="0.57647058819999997" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="A0l-hl-SOF"/>
+                                    <constraint firstAttribute="height" constant="35" id="IsN-xT-UBb"/>
+                                </constraints>
+                                <state key="normal" title="Delete Item">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onDeleteItemTapped:" destination="In8-kF-CUN" eventType="touchUpInside" id="n7P-6c-Wfk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="U5k-dL-b2O" secondAttribute="trailing" constant="10" id="5fe-Am-B9O"/>
                             <constraint firstAttribute="trailingMargin" secondItem="g9o-sX-sBU" secondAttribute="trailing" constant="10" id="6h2-EK-3HY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Wpu-jN-aZe" secondAttribute="trailing" constant="10" id="8Hb-eb-1KT"/>
+                            <constraint firstItem="hyg-E7-FpQ" firstAttribute="centerX" secondItem="OQ4-Ct-lyo" secondAttribute="centerX" id="ATg-uO-KcA"/>
                             <constraint firstItem="g9o-sX-sBU" firstAttribute="top" secondItem="Yhr-31-nsj" secondAttribute="bottom" constant="15" id="FQb-0e-fsD"/>
                             <constraint firstAttribute="trailing" secondItem="p3L-e0-nqi" secondAttribute="trailing" constant="8" id="J5c-ZK-HNt"/>
                             <constraint firstItem="U5k-dL-b2O" firstAttribute="leading" secondItem="OQ4-Ct-lyo" secondAttribute="leadingMargin" constant="10" id="PKL-ys-yWL"/>
@@ -229,6 +247,7 @@
                             <constraint firstItem="bfL-xJ-dQc" firstAttribute="top" secondItem="af2-Qb-i2d" secondAttribute="bottom" id="g2Z-be-LLD"/>
                             <constraint firstItem="Rij-hn-6Pw" firstAttribute="top" secondItem="p3L-e0-nqi" secondAttribute="bottom" constant="8" id="gS3-9k-5Ch"/>
                             <constraint firstItem="Yhr-31-nsj" firstAttribute="leading" secondItem="OQ4-Ct-lyo" secondAttribute="leadingMargin" constant="10" id="hG7-To-cY1"/>
+                            <constraint firstItem="Rij-hn-6Pw" firstAttribute="top" secondItem="hyg-E7-FpQ" secondAttribute="bottom" constant="42" id="kJd-Ta-gMD"/>
                             <constraint firstItem="Wpu-jN-aZe" firstAttribute="leading" secondItem="OQ4-Ct-lyo" secondAttribute="leadingMargin" constant="10" id="nLC-1J-tqG"/>
                             <constraint firstItem="rcY-Ox-OPD" firstAttribute="centerY" secondItem="bfL-xJ-dQc" secondAttribute="centerY" id="oZt-qr-CoS"/>
                             <constraint firstItem="rcY-Ox-OPD" firstAttribute="centerX" secondItem="bfL-xJ-dQc" secondAttribute="centerX" id="w2g-H6-MI3"/>
@@ -239,7 +258,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="FlixPix" id="ROR-AP-Wgl">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="uSu-4V-YwX">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="uSu-4V-YwX">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="onCancelTapped:" destination="In8-kF-CUN" id="OOP-H2-qLd"/>
@@ -253,6 +272,7 @@
                     <connections>
                         <outlet property="addImgBtn" destination="X3K-r4-LDj" id="6oi-nm-7f9"/>
                         <outlet property="bgView" destination="p3L-e0-nqi" id="Oug-yc-GsP"/>
+                        <outlet property="deleteBtn" destination="hyg-E7-FpQ" id="auB-oh-OoR"/>
                         <outlet property="descTextField" destination="Yhr-31-nsj" id="7CA-rE-dFw"/>
                         <outlet property="movieImg" destination="bfL-xJ-dQc" id="KTR-NW-ym7"/>
                         <outlet property="plotTextField" destination="Wpu-jN-aZe" id="E8c-JS-BKz"/>
@@ -286,20 +306,86 @@
                                 <rect key="frame" x="8" y="272" width="583" height="320"/>
                                 <color key="backgroundColor" white="0.45000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="JGb-if-buA">
+                                <rect key="frame" x="19" y="286" width="562" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="9fg-57-pZI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="iFB-SJ-4Gk">
+                                <rect key="frame" x="19" y="315" width="562" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="XI5-7f-gZS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="iRG-0X-0z8">
+                                <rect key="frame" x="19" y="356" width="562" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="Dg3-Ga-TzD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="GFP-US-CFW">
+                                <rect key="frame" x="19" y="382" width="562" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="drn-Qe-peT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adq-gm-hsD">
+                                <rect key="frame" x="549" y="72" width="42" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="Cjt-6J-GaK"/>
+                                    <constraint firstAttribute="height" constant="38" id="Gx7-NY-QyU"/>
+                                </constraints>
+                                <state key="normal" image="filmCanister"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="JGb-if-buA" secondAttribute="trailing" constant="-1" id="3NI-yf-ZMG"/>
                             <constraint firstAttribute="trailing" secondItem="3e4-Pt-eE5" secondAttribute="trailing" id="96V-sc-h7q"/>
                             <constraint firstItem="CXL-kh-KSa" firstAttribute="top" secondItem="fH2-mb-eu7" secondAttribute="bottom" constant="8" id="BmU-cc-6w3"/>
                             <constraint firstItem="fH2-mb-eu7" firstAttribute="top" secondItem="3e4-Pt-eE5" secondAttribute="bottom" constant="8" id="DMA-zW-Z9N"/>
+                            <constraint firstItem="Adq-gm-hsD" firstAttribute="top" secondItem="5tQ-NC-h8u" secondAttribute="bottom" constant="8" id="GJC-nP-1ZU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iRG-0X-0z8" secondAttribute="trailing" constant="-1" id="GUX-jo-CEz"/>
+                            <constraint firstItem="iRG-0X-0z8" firstAttribute="leading" secondItem="KT6-n6-Phk" secondAttribute="leadingMargin" constant="-1" id="JQ2-Hl-egJ"/>
                             <constraint firstItem="3e4-Pt-eE5" firstAttribute="top" secondItem="5tQ-NC-h8u" secondAttribute="bottom" id="MhT-0A-M7Q"/>
+                            <constraint firstItem="iRG-0X-0z8" firstAttribute="top" secondItem="iFB-SJ-4Gk" secondAttribute="bottom" constant="12" id="MvV-sy-IqY"/>
+                            <constraint firstItem="GFP-US-CFW" firstAttribute="top" secondItem="iFB-SJ-4Gk" secondAttribute="bottom" constant="38" id="P6x-R3-DRr"/>
+                            <constraint firstItem="GFP-US-CFW" firstAttribute="leading" secondItem="KT6-n6-Phk" secondAttribute="leadingMargin" constant="-1" id="Ufz-kN-22i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GFP-US-CFW" secondAttribute="trailing" constant="-1" id="VFb-fK-OPW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Adq-gm-hsD" secondAttribute="trailing" constant="-11" id="cat-Y7-Sjl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fH2-mb-eu7" secondAttribute="trailing" constant="-11" id="fUo-A6-QbN"/>
+                            <constraint firstItem="iFB-SJ-4Gk" firstAttribute="leading" secondItem="KT6-n6-Phk" secondAttribute="leadingMargin" constant="-1" id="gNN-nu-a40"/>
+                            <constraint firstItem="iFB-SJ-4Gk" firstAttribute="top" secondItem="JGb-if-buA" secondAttribute="bottom" id="iqc-AG-dzV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iFB-SJ-4Gk" secondAttribute="trailing" constant="-1" id="jRT-Gt-f9d"/>
                             <constraint firstItem="3e4-Pt-eE5" firstAttribute="leading" secondItem="KT6-n6-Phk" secondAttribute="leading" id="oUi-H7-IVI"/>
                             <constraint firstItem="fH2-mb-eu7" firstAttribute="leading" secondItem="KT6-n6-Phk" secondAttribute="leadingMargin" constant="-12" id="oWM-f1-SNP"/>
+                            <constraint firstItem="JGb-if-buA" firstAttribute="top" secondItem="3e4-Pt-eE5" secondAttribute="bottom" constant="22" id="yuD-d4-IMI"/>
+                            <constraint firstItem="JGb-if-buA" firstAttribute="leading" secondItem="KT6-n6-Phk" secondAttribute="leadingMargin" constant="-1" id="zK9-f7-yND"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="FlixPix" id="J9U-T8-o13">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="qvx-Wr-5v9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="qvx-Wr-5v9">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="In8-kF-CUN" kind="show" id="bnO-0I-naV"/>
@@ -308,7 +394,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bgView" destination="fH2-mb-eu7" id="NYZ-uS-QM0"/>
+                        <outlet property="descLabel" destination="iFB-SJ-4Gk" id="Zef-aY-8VT"/>
+                        <outlet property="imdbButton" destination="Adq-gm-hsD" id="52B-nN-j2t"/>
+                        <outlet property="linkLabel" destination="GFP-US-CFW" id="8mw-B8-Eue"/>
                         <outlet property="movieImg" destination="3e4-Pt-eE5" id="dIR-IA-YBk"/>
+                        <outlet property="plotLabel" destination="iRG-0X-0z8" id="qkx-eg-6u6"/>
+                        <outlet property="titleLabel" destination="JGb-if-buA" id="xTn-dT-JL0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oL0-qe-YML" userLabel="First Responder" sceneMemberID="firstResponder"/>

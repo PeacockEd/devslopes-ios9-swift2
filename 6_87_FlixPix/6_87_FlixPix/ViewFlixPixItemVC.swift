@@ -12,6 +12,11 @@ class ViewFlixPixItemVC: UIViewController {
     
     @IBOutlet weak var movieImg:UIImageView!
     @IBOutlet weak var bgView:UIView!
+    @IBOutlet weak var imdbButton:UIButton!
+    @IBOutlet weak var titleLabel:UILabel!
+    @IBOutlet weak var descLabel:UILabel!
+    @IBOutlet weak var plotLabel:UILabel!
+    @IBOutlet weak var linkLabel:UILabel!
     
 
     override func viewDidLoad() {

@@ -13,6 +13,7 @@ class ModifyFlixPixVC: ResponsiveTextFieldViewController {
     @IBOutlet weak var movieImg:UIImageView!
     @IBOutlet weak var bgView:UIView!
     @IBOutlet weak var addImgBtn:UIButton!
+    @IBOutlet weak var deleteBtn:UIButton!
     
     @IBOutlet weak var titleTextField:UITextField!
     @IBOutlet weak var descTextField:UITextField!
@@ -30,7 +31,20 @@ class ModifyFlixPixVC: ResponsiveTextFieldViewController {
         self.addImgBtn.layer.cornerRadius = 10
         self.addImgBtn.clipsToBounds = true
         
+        self.deleteBtn.layer.cornerRadius = 10
+        self.deleteBtn.clipsToBounds = true
+        
         navigationItem.title = "Add a New Flix"
+    }
+    
+    @IBAction func onAddPhotoTapped(sender:AnyObject)
+    {
+        
+    }
+    
+    @IBAction func onDeleteItemTapped(sender:AnyObject)
+    {
+        
     }
 
     @IBAction func onCancelTapped(sender:AnyObject)
