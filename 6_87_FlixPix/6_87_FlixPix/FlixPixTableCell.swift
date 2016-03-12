@@ -10,7 +10,7 @@ import UIKit
 
 class FlixPixTableCell: UITableViewCell {
     
-    @IBOutlet weak var cellImg:UIImageView!
+    @IBOutlet weak var cellImgView:UIImageView!
     @IBOutlet weak var linkBtn:UIButton!
     @IBOutlet weak var titleBgView:UIView!
     @IBOutlet weak var titleLabel:UILabel!
@@ -25,9 +25,11 @@ class FlixPixTableCell: UITableViewCell {
         self.titleBgView.clipsToBounds = true
     }
     
-    // todo: change this from AnyObject to a MOVIE ENTITY ITEM!
-    func configureCell(item:AnyObject)
+    func configureCell(item:FlixPixItem)
     {
+        cellImgView.image = item.getFlixImg()
+        descriptionLabel.text = item.itemDesc
+        titleLabel.text = item.title
         
     }
     

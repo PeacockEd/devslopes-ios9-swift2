@@ -29,7 +29,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mpq-Qg-sdd">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mpq-Qg-sdd">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="107"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="107" id="coA-ND-ofa"/>
@@ -99,10 +99,11 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <outlet property="cellImg" destination="mpq-Qg-sdd" id="OTy-Pb-msk"/>
-                                            <outlet property="linkBtn" destination="yiD-yM-TgR" id="nI1-fN-hdm"/>
-                                            <outlet property="titleBgView" destination="CKM-HD-xwp" id="1UF-2d-ZSE"/>
-                                            <outlet property="titleLabel" destination="kLd-Hz-Mo3" id="dTj-eZ-dd7"/>
+                                            <outlet property="cellImgView" destination="mpq-Qg-sdd" id="rbg-da-6h7"/>
+                                            <outlet property="descriptionLabel" destination="YpY-x5-4N1" id="Lfe-NL-hQ9"/>
+                                            <outlet property="linkBtn" destination="yiD-yM-TgR" id="oby-1q-Ctt"/>
+                                            <outlet property="titleBgView" destination="CKM-HD-xwp" id="Pzo-p1-fTL"/>
+                                            <outlet property="titleLabel" destination="kLd-Hz-Mo3" id="Yh2-CI-aq5"/>
                                             <segue destination="Yh3-Ee-WQD" kind="show" id="hG2-Ko-ELw"/>
                                         </connections>
                                     </tableViewCell>
@@ -125,6 +126,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="EqG-fB-TlT" id="41b-z6-rtG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -266,12 +270,16 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="ZIg-WE-aCe">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="onDoneTapped:" destination="In8-kF-CUN" id="HNn-Lg-gD1"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addImgBtn" destination="X3K-r4-LDj" id="6oi-nm-7f9"/>
                         <outlet property="bgView" destination="p3L-e0-nqi" id="Oug-yc-GsP"/>
+                        <outlet property="cameraIcon" destination="fdb-b5-g4e" id="Ovm-lk-kOD"/>
                         <outlet property="deleteBtn" destination="hyg-E7-FpQ" id="auB-oh-OoR"/>
                         <outlet property="descTextField" destination="Yhr-31-nsj" id="7CA-rE-dFw"/>
                         <outlet property="movieImg" destination="bfL-xJ-dQc" id="KTR-NW-ym7"/>
@@ -436,6 +444,6 @@
         <image name="placeholder" width="758" height="648"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bnO-0I-naV"/>
+        <segue reference="SGs-na-sNw"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -17,6 +17,8 @@
 		505AF8351C8E27C7000024B4 /* __87_FlixPix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 505AF8331C8E27C7000024B4 /* __87_FlixPix.xcdatamodeld */; };
 		505AF8371C8E27C7000024B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 505AF8361C8E27C7000024B4 /* Assets.xcassets */; };
 		505AF83A1C8E27C7000024B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505AF8381C8E27C7000024B4 /* LaunchScreen.storyboard */; };
+		50B77C8C1C930EC0009B32B9 /* FlixPixItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B77C8A1C930EC0009B32B9 /* FlixPixItem+CoreDataProperties.swift */; };
+		50B77C8D1C930EC0009B32B9 /* FlixPixItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B77C8B1C930EC0009B32B9 /* FlixPixItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		505AF8361C8E27C7000024B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		505AF8391C8E27C7000024B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		505AF83B1C8E27C7000024B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50B77C8A1C930EC0009B32B9 /* FlixPixItem+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FlixPixItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		50B77C8B1C930EC0009B32B9 /* FlixPixItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlixPixItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,19 +68,37 @@
 		505AF82B1C8E27C7000024B4 /* 6_87_FlixPix */ = {
 			isa = PBXGroup;
 			children = (
-				501279881C90EE8C003B2172 /* ResponsiveTextFieldViewController.swift */,
+				50B77C8E1C930ECE009B32B9 /* Model */,
+				50B77C8F1C93467C009B32B9 /* View */,
 				505AF82C1C8E27C7000024B4 /* AppDelegate.swift */,
-				505AF82E1C8E27C7000024B4 /* ViewController.swift */,
 				505AF8301C8E27C7000024B4 /* Main.storyboard */,
 				505AF8361C8E27C7000024B4 /* Assets.xcassets */,
 				505AF8381C8E27C7000024B4 /* LaunchScreen.storyboard */,
 				505AF83B1C8E27C7000024B4 /* Info.plist */,
-				505AF8331C8E27C7000024B4 /* __87_FlixPix.xcdatamodeld */,
-				501279821C907F7F003B2172 /* FlixPixTableCell.swift */,
-				501279841C909BDF003B2172 /* ModifyFlixPixVC.swift */,
-				501279861C909FB1003B2172 /* ViewFlixPixItemVC.swift */,
 			);
 			path = 6_87_FlixPix;
+			sourceTree = "<group>";
+		};
+		50B77C8E1C930ECE009B32B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				50B77C8A1C930EC0009B32B9 /* FlixPixItem+CoreDataProperties.swift */,
+				50B77C8B1C930EC0009B32B9 /* FlixPixItem.swift */,
+				505AF8331C8E27C7000024B4 /* __87_FlixPix.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		50B77C8F1C93467C009B32B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				501279881C90EE8C003B2172 /* ResponsiveTextFieldViewController.swift */,
+				501279841C909BDF003B2172 /* ModifyFlixPixVC.swift */,
+				501279821C907F7F003B2172 /* FlixPixTableCell.swift */,
+				501279861C909FB1003B2172 /* ViewFlixPixItemVC.swift */,
+				505AF82E1C8E27C7000024B4 /* ViewController.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,8 +177,10 @@
 				505AF8351C8E27C7000024B4 /* __87_FlixPix.xcdatamodeld in Sources */,
 				501279851C909BDF003B2172 /* ModifyFlixPixVC.swift in Sources */,
 				505AF82D1C8E27C7000024B4 /* AppDelegate.swift in Sources */,
+				50B77C8C1C930EC0009B32B9 /* FlixPixItem+CoreDataProperties.swift in Sources */,
 				501279871C909FB1003B2172 /* ViewFlixPixItemVC.swift in Sources */,
 				501279891C90EE8C003B2172 /* ResponsiveTextFieldViewController.swift in Sources */,
+				50B77C8D1C930EC0009B32B9 /* FlixPixItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
