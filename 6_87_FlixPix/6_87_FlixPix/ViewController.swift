@@ -67,6 +67,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             if let detailVC = segue.destinationViewController as? ViewFlixPixItemVC {
                 detailVC.flixPixItem = items[(tableView.indexPathForSelectedRow?.row)!]
             }
+        } else if segue.identifier == "editItem" {
+            if let editVC = segue.destinationViewController as? ModifyFlixPixVC {
+                editVC.flixPixItem = items[(tableView.indexPathForSelectedRow?.row)!]
+            }
         }
     }
     

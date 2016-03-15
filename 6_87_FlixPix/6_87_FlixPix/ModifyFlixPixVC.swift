@@ -26,7 +26,16 @@ class ModifyFlixPixVC: ResponsiveTextFieldViewController,
     
     private var imagePicker:UIImagePickerController!
     private var isActiveItem = false
+    private var _flixPixItem:FlixPixItem?
     
+    var flixPixItem:FlixPixItem? {
+        get {
+            return _flixPixItem
+        }
+        set {
+            _flixPixItem = newValue
+        }
+    }
 
     override func viewDidLoad()
     {
@@ -46,7 +55,14 @@ class ModifyFlixPixVC: ResponsiveTextFieldViewController,
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         
-        navigationItem.title = "Add a New Flix"
+        configureView()
+    }
+    
+    override func viewWillAppear(animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        
+        //configureView()
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?)
@@ -56,6 +72,16 @@ class ModifyFlixPixVC: ResponsiveTextFieldViewController,
         
         addImgBtn.titleLabel?.text = "Edit Photo"
         cameraIcon.alpha = 0.0
+    }
+    
+    private func configureView()
+    {
+        if let item = flixPixItem {
+            navigationItem.title = "Edit Item"
+            self.titleTextField.text = item.title
+        } else {
+            navigationItem.title = "Add a New Flix"
+        }
     }
     
     private func popToTableView()

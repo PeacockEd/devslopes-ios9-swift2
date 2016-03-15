@@ -32,7 +32,7 @@ class ViewFlixPixItemVC: UIViewController {
     override func viewWillAppear(animated: Bool)
     {
         super.viewWillAppear(animated)
-        if let item = _flixPixItem { configureView(item) }
+        if let item = flixPixItem { configureView(item) }
     }
 
     override func viewDidLoad() {

@@ -29,6 +29,10 @@ class FlixPixTableCell: UITableViewCell {
     
     func configureCell(item:FlixPixItem)
     {
+        let view = UIView()
+        view.backgroundColor = UIColor(red: 180/255.0, green: 138/255.0, blue: 171/255.0, alpha: 0.5)
+        self.selectedBackgroundView = view
+        
         cellImgView.image = item.getFlixImg()
         descriptionLabel.text = item.itemDesc
         titleLabel.text = item.title
