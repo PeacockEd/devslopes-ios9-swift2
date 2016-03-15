@@ -58,6 +58,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return items.count
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return CGFloat(165.0)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "viewItem" {
+            if let detailVC = segue.destinationViewController as? ViewFlixPixItemVC {
+                detailVC.flixPixItem = items[(tableView.indexPathForSelectedRow?.row)!]
+            }
+        }
+    }
+    
     private func fetchAndSetResults()
     {
         let app = UIApplication.sharedApplication().delegate as! AppDelegate

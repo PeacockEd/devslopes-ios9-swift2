@@ -21,6 +21,8 @@ class FlixPixTableCell: UITableViewCell {
     {
         super.awakeFromNib()
         
+        self.cellImgView.clipsToBounds = true
+        
         self.titleBgView.layer.cornerRadius = 6
         self.titleBgView.clipsToBounds = true
     }
