@@ -19,6 +19,8 @@ class ViewFlixPixItemVC: UIViewController {
     @IBOutlet weak var linkLabel:UILabel!
     
     private var _flixPixItem:FlixPixItem?
+    private var imdbUrl:String?
+    
     
     var flixPixItem:FlixPixItem? {
         get {
@@ -51,5 +53,36 @@ class ViewFlixPixItemVC: UIViewController {
         descLabel.text = item.itemDesc
         plotLabel.text = item.itemPlot
         linkLabel.text = item.imdbLink
+        
+        formLinkUrl(item.imdbLink)
+    }
+    
+    private func formLinkUrl(url:String?)
+    {
+        if let linkUrl = url {
+            imdbUrl = linkUrl
+            let rangeOfHttp = linkUrl.rangeOfString("http://")
+            if rangeOfHttp == nil {
+                imdbUrl = "http://" + linkUrl
+            }
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "editItem" {
+            if let editVC = segue.destinationViewController as? ModifyFlixPixVC {
+                editVC.flixPixItem = flixPixItem
+            }
+        }
+    }
+    
+    @IBAction func onLinkButtonTapped(sender:AnyObject)
+    {
+        if let link_url = imdbUrl {
+            let url = NSURL(string: link_url)!
+            if UIApplication.sharedApplication().canOpenURL(url) {
+                UIApplication.sharedApplication().openURL(url)
+            }
+        }
     }
 }

@@ -43,10 +43,10 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiD-yM-TgR">
-                                                    <rect key="frame" x="550" y="8" width="42" height="38"/>
+                                                    <rect key="frame" x="549" y="8" width="43" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="42" id="hQH-Df-xfd"/>
-                                                        <constraint firstAttribute="height" constant="38" id="s6G-EP-IYb"/>
+                                                        <constraint firstAttribute="height" constant="40" id="Yli-P9-raz"/>
+                                                        <constraint firstAttribute="width" constant="43" id="YyS-Tf-0eq"/>
                                                     </constraints>
                                                     <state key="normal" image="filmCanister"/>
                                                     <connections>
@@ -60,7 +60,7 @@
                                                         <constraint firstAttribute="height" constant="2" id="9aR-sg-wF8"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Greatest Movie App of All Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="kLd-Hz-Mo3">
@@ -95,15 +95,15 @@
                                                 <constraint firstItem="kLd-Hz-Mo3" firstAttribute="top" secondItem="mpq-Qg-sdd" secondAttribute="bottom" id="7jV-rg-7zg"/>
                                                 <constraint firstItem="kLd-Hz-Mo3" firstAttribute="trailing" secondItem="zlU-0W-uUY" secondAttribute="trailingMargin" id="9IQ-ER-Zqd"/>
                                                 <constraint firstItem="mpq-Qg-sdd" firstAttribute="top" secondItem="zlU-0W-uUY" secondAttribute="top" id="A2e-hS-lpr"/>
+                                                <constraint firstItem="yiD-yM-TgR" firstAttribute="trailing" secondItem="zlU-0W-uUY" secondAttribute="trailingMargin" id="B0j-LR-nn1"/>
                                                 <constraint firstItem="YpY-x5-4N1" firstAttribute="leading" secondItem="zlU-0W-uUY" secondAttribute="leadingMargin" constant="2" id="EAS-PB-9vQ"/>
-                                                <constraint firstItem="yiD-yM-TgR" firstAttribute="top" secondItem="zlU-0W-uUY" secondAttribute="topMargin" id="MpM-9p-YlL"/>
                                                 <constraint firstItem="mpq-Qg-sdd" firstAttribute="leading" secondItem="zlU-0W-uUY" secondAttribute="leading" constant="2" id="TMg-fa-K6e"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="YpY-x5-4N1" secondAttribute="bottom" constant="-2" id="ZDO-8V-tXk"/>
                                                 <constraint firstAttribute="trailing" secondItem="d9m-aq-UnM" secondAttribute="trailing" constant="2" id="bfC-4Y-Yn7"/>
+                                                <constraint firstItem="yiD-yM-TgR" firstAttribute="top" secondItem="zlU-0W-uUY" secondAttribute="topMargin" id="eRK-Jh-uFY"/>
                                                 <constraint firstItem="kLd-Hz-Mo3" firstAttribute="leading" secondItem="zlU-0W-uUY" secondAttribute="leadingMargin" id="gjb-Yc-zcv"/>
                                                 <constraint firstItem="hXo-qI-EuP" firstAttribute="leading" secondItem="zlU-0W-uUY" secondAttribute="leading" id="haa-2d-Iqz"/>
                                                 <constraint firstAttribute="trailing" secondItem="mpq-Qg-sdd" secondAttribute="trailing" constant="2" id="s2d-QD-iRV"/>
-                                                <constraint firstItem="yiD-yM-TgR" firstAttribute="trailing" secondItem="zlU-0W-uUY" secondAttribute="trailingMargin" id="x7x-cB-6pm"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -129,7 +129,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="FlixPix" id="V4h-9O-Cnd">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="kV3-gW-OaW">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="In8-kF-CUN" kind="show" id="SGs-na-sNw"/>
                             </connections>
@@ -272,13 +271,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="FlixPix" id="ROR-AP-Wgl">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="uSu-4V-YwX">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="onCancelTapped:" destination="In8-kF-CUN" id="OOP-H2-qLd"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="ZIg-WE-aCe">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="onDoneTapped:" destination="In8-kF-CUN" id="HNn-Lg-gD1"/>
                             </connections>
@@ -368,12 +365,15 @@
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adq-gm-hsD">
-                                <rect key="frame" x="549" y="72" width="42" height="38"/>
+                                <rect key="frame" x="548" y="72" width="43" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="Cjt-6J-GaK"/>
-                                    <constraint firstAttribute="height" constant="38" id="Gx7-NY-QyU"/>
+                                    <constraint firstAttribute="width" constant="43" id="Scz-xK-ZFn"/>
+                                    <constraint firstAttribute="height" constant="40" id="iwA-TH-Wmn"/>
                                 </constraints>
                                 <state key="normal" image="filmCanister"/>
+                                <connections>
+                                    <action selector="onLinkButtonTapped:" destination="Yh3-Ee-WQD" eventType="touchUpInside" id="KH5-uN-psO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -382,28 +382,27 @@
                             <constraint firstAttribute="trailing" secondItem="3e4-Pt-eE5" secondAttribute="trailing" id="96V-sc-h7q"/>
                             <constraint firstItem="CXL-kh-KSa" firstAttribute="top" secondItem="fH2-mb-eu7" secondAttribute="bottom" constant="8" id="BmU-cc-6w3"/>
                             <constraint firstItem="fH2-mb-eu7" firstAttribute="top" secondItem="3e4-Pt-eE5" secondAttribute="bottom" constant="8" id="DMA-zW-Z9N"/>
-                            <constraint firstItem="Adq-gm-hsD" firstAttribute="top" secondItem="5tQ-NC-h8u" secondAttribute="bottom" constant="8" id="GJC-nP-1ZU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iRG-0X-0z8" secondAttribute="trailing" constant="-1" id="GUX-jo-CEz"/>
+                            <constraint firstItem="Adq-gm-hsD" firstAttribute="top" secondItem="5tQ-NC-h8u" secondAttribute="bottom" constant="8" id="IXy-Sx-PN8"/>
                             <constraint firstItem="iRG-0X-0z8" firstAttribute="leading" secondItem="KT6-n6-Phk" secondAttribute="leadingMargin" constant="-1" id="JQ2-Hl-egJ"/>
                             <constraint firstItem="3e4-Pt-eE5" firstAttribute="top" secondItem="5tQ-NC-h8u" secondAttribute="bottom" id="MhT-0A-M7Q"/>
                             <constraint firstItem="iRG-0X-0z8" firstAttribute="top" secondItem="iFB-SJ-4Gk" secondAttribute="bottom" constant="12" id="MvV-sy-IqY"/>
                             <constraint firstItem="GFP-US-CFW" firstAttribute="top" secondItem="iFB-SJ-4Gk" secondAttribute="bottom" constant="38" id="P6x-R3-DRr"/>
                             <constraint firstItem="GFP-US-CFW" firstAttribute="leading" secondItem="KT6-n6-Phk" secondAttribute="leadingMargin" constant="-1" id="Ufz-kN-22i"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GFP-US-CFW" secondAttribute="trailing" constant="-1" id="VFb-fK-OPW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Adq-gm-hsD" secondAttribute="trailing" constant="-11" id="cat-Y7-Sjl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fH2-mb-eu7" secondAttribute="trailing" constant="-11" id="fUo-A6-QbN"/>
                             <constraint firstItem="iFB-SJ-4Gk" firstAttribute="leading" secondItem="KT6-n6-Phk" secondAttribute="leadingMargin" constant="-1" id="gNN-nu-a40"/>
                             <constraint firstItem="iFB-SJ-4Gk" firstAttribute="top" secondItem="JGb-if-buA" secondAttribute="bottom" id="iqc-AG-dzV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iFB-SJ-4Gk" secondAttribute="trailing" constant="-1" id="jRT-Gt-f9d"/>
                             <constraint firstItem="3e4-Pt-eE5" firstAttribute="leading" secondItem="KT6-n6-Phk" secondAttribute="leading" id="oUi-H7-IVI"/>
                             <constraint firstItem="fH2-mb-eu7" firstAttribute="leading" secondItem="KT6-n6-Phk" secondAttribute="leadingMargin" constant="-12" id="oWM-f1-SNP"/>
+                            <constraint firstAttribute="trailing" secondItem="Adq-gm-hsD" secondAttribute="trailing" constant="9" id="wY8-At-12l"/>
                             <constraint firstItem="JGb-if-buA" firstAttribute="top" secondItem="3e4-Pt-eE5" secondAttribute="bottom" constant="22" id="yuD-d4-IMI"/>
                             <constraint firstItem="JGb-if-buA" firstAttribute="leading" secondItem="KT6-n6-Phk" secondAttribute="leadingMargin" constant="-1" id="zK9-f7-yND"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="FlixPix" id="J9U-T8-o13">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="qvx-Wr-5v9">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="In8-kF-CUN" kind="show" identifier="editItem" id="bnO-0I-naV"/>
                             </connections>
@@ -431,6 +430,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gFT-rt-8xB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
@@ -448,7 +448,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="filmCanister" width="168" height="153"/>
+        <image name="filmCanister" width="176" height="161"/>
         <image name="photoIcon" width="161" height="161"/>
         <image name="placeholder" width="758" height="648"/>
     </resources>

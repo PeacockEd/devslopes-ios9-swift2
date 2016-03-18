@@ -25,8 +25,9 @@ class ModifyFlixPixVC: ResponsiveTextFieldViewController,
     @IBOutlet weak var plotTextField:UITextField!
     
     private var imagePicker:UIImagePickerController!
-    private var isActiveItem = false
     private var _flixPixItem:FlixPixItem?
+    private var selectedImage:UIImage?
+    
     
     var flixPixItem:FlixPixItem? {
         get {
@@ -41,8 +42,6 @@ class ModifyFlixPixVC: ResponsiveTextFieldViewController,
     {
         super.viewDidLoad()
         
-        deleteBtn.hidden = !isActiveItem
-        
         self.bgView.layer.cornerRadius = 6
         self.bgView.clipsToBounds = true
         
@@ -54,23 +53,20 @@ class ModifyFlixPixVC: ResponsiveTextFieldViewController,
         
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        
-        configureView()
     }
     
     override func viewWillAppear(animated: Bool)
     {
         super.viewWillAppear(animated)
-        
-        //configureView()
+        configureView()
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?)
     {
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
-        movieImg.image = image
         
-        addImgBtn.titleLabel?.text = "Edit Photo"
+        selectedImage = image
+        addImgBtn.setTitle("Update Photo", forState: .Normal)
         cameraIcon.alpha = 0.0
     }
     
@@ -78,9 +74,24 @@ class ModifyFlixPixVC: ResponsiveTextFieldViewController,
     {
         if let item = flixPixItem {
             navigationItem.title = "Edit Item"
-            self.titleTextField.text = item.title
+            if let image = selectedImage {
+                movieImg.image = image
+            } else {
+                movieImg.image = item.getFlixImg()
+            }
+            titleTextField.text = item.title
+            descTextField.text = item.itemDesc
+            plotTextField.text = item.itemPlot
+            urlTextField.text = item.imdbLink
+            cameraIcon.alpha = 0.0
+            addImgBtn.setTitle("Update Photo", forState: .Normal)
+            deleteBtn.hidden = false
         } else {
             navigationItem.title = "Add a New Flix"
+            deleteBtn.hidden = true
+            if let image = selectedImage {
+                movieImg.image = image
+            }
         }
     }
     
@@ -96,30 +107,51 @@ class ModifyFlixPixVC: ResponsiveTextFieldViewController,
     
     @IBAction func onDeleteItemTapped(sender:AnyObject)
     {
-        
+        if let item = flixPixItem, let context = item.managedObjectContext {
+            context.deleteObject(item)
+            do {
+                try context.save()
+            } catch {
+                print("Unable to delete item!")
+            }
+        }
+        navigationController?.popToRootViewControllerAnimated(true)
     }
     
     @IBAction func onDoneTapped(sender:AnyObject)
     {
-        if let title = titleTextField.text where title != "" {
-            let app = UIApplication.sharedApplication().delegate as! AppDelegate
-            let context = app.managedObjectContext
-            if let entity = NSEntityDescription.entityForName("FlixPixItem", inManagedObjectContext: context) {
-                let item = FlixPixItem(entity: entity, insertIntoManagedObjectContext:context)
-                item.title = titleTextField.text
-                item.itemDesc = descTextField.text
-                item.imdbLink = urlTextField.text
-                item.itemPlot = plotTextField.text
-                if let image = movieImg.image {
-                    item.setFlixImg(image)
-                }
-                context.insertObject(item)
-                do {
-                    try context.save()
-                } catch {
-                    print("Unable to save item!")
+        let app = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context = app.managedObjectContext
+        
+        if let currentItem = flixPixItem {
+            // EDIT existing item
+            currentItem.title = titleTextField.text
+            currentItem.itemDesc = descTextField.text
+            currentItem.imdbLink = urlTextField.text
+            currentItem.itemPlot = plotTextField.text
+            if let image = movieImg.image {
+                currentItem.setFlixImg(image)
+            }
+        } else {
+            // NEW item
+            if let title = titleTextField.text where title != "" {
+                if let entity = NSEntityDescription.entityForName("FlixPixItem", inManagedObjectContext: context) {
+                    let item = FlixPixItem(entity: entity, insertIntoManagedObjectContext:context)
+                    item.title = titleTextField.text
+                    item.itemDesc = descTextField.text
+                    item.imdbLink = urlTextField.text
+                    item.itemPlot = plotTextField.text
+                    if let image = movieImg.image {
+                        item.setFlixImg(image)
+                    }
+                    context.insertObject(item)
                 }
             }
+        }
+        do {
+            try context.save()
+        } catch {
+            print("Unable to save item!")
         }
         popToTableView()
     }
